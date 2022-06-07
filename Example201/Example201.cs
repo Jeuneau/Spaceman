@@ -9,8 +9,10 @@ namespace Movement
 		private BouncingBall ball;
 		float x = 100;
 		float y = 100;
-		float xspeed = 1;
+		float xspeed = 5;
 		float yspeed = 3.3f;
+
+		
 
 		private int size;
 		private int background;
