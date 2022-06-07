@@ -78,8 +78,6 @@ namespace Movement
 			{
 				Velocity.Y*=-1;
 			}
-
-			
 		}
 
 	}
