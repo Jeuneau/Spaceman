@@ -24,7 +24,10 @@ namespace Movement
 	class Pointer : SpriteNode
 	{
 		// your private fields here (add Velocity, Acceleration, and MaxSpeed)
-
+		Vector2 velocity;
+		Vector2 acceleration;
+		Vector2 MaxSpeed;
+		Vector2 mouse;
 
 		// constructor + call base constructor
 		public Pointer() : base("resources/spaceship.png")
@@ -46,14 +49,25 @@ namespace Movement
 			// Or just implement it in Example 110 Follower
 
 			Vector2 mouse = Raylib.GetMousePosition();
-			// Console.WriteLine(mouse);
+			Console.WriteLine(mouse);
+			
 
-			Position = mouse; // incorrect!!
+			//Position = mouse; // incorrect!!
 
-			Rotation += deltaTime * Math.PI;  // incorrect!!
+			//Rotation += deltaTime * Math.PI;  // incorrect!!
 
 			// TODO implement
-			// Position += Velocity * deltaTime;
+			Position += velocity * deltaTime;
+
+			
+			// Console.WriteLine(mouse);
+			Vector2 direction= mouse - Position;
+			double angle = System.Math.Atan2(direction.Y,direction.X);
+			Rotation= angle;
+			acceleration= mouse - Position;
+			acceleration= Vector2.Normalize(acceleration);
+			
+			velocity+= acceleration;
 		}
 
 		private void BounceEdges()
