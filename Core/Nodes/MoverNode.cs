@@ -78,6 +78,23 @@ namespace Movement
 				Velocity.Y*=-1;
 			}
 		}
+			public void WrapEdges()
+		{
+			float scr_width = Settings.ScreenSize.X;
+			float scr_height = Settings.ScreenSize.Y;
+			float spr_width = TextureSize.X;
+			float spr_height = TextureSize.Y;
 
+			// // TODO implement...
+			if (Position.X > scr_width - spr_width/2)
+			{
+				Position.X = 0;
+			}
+			if (Position.Y > scr_height - spr_height/2)
+			{
+				Position.Y = 0;
+			}
+
+		}
 	}
 }
