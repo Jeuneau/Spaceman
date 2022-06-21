@@ -10,6 +10,8 @@ namespace Movement
 		// your private fields here (add Velocity, Acceleration, and MaxSpeed)
 		List<Particle> particles;
 		private List<Color> colors;
+		public Particle p2;
+
 
 		// constructor + call base constructor
 		public ParticleSystem(float x, float y) : base()
@@ -44,8 +46,25 @@ namespace Movement
 		// Update is called every frame
 		public override void Update(float deltaTime)
 		{
-			
+			p2= particles[0];
+			if(p2.isDead()) 
+			{
+				particles.Remove(p2);
+				particles.Add(p2);
+				p2.Position= new Vector2(0,0);
+				p2.Reset();
+
+			}
+			else
+			{
+				foreach (Particle p in particles)
+				{
+	p2.Update(deltaTime);
+				}
+			}
 		}
+
+		
 
 
 	}

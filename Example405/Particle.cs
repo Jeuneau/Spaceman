@@ -25,7 +25,15 @@ namespace Movement
 	class Particle : SpriteNode
 	{
 		// your private fields here (add Velocity, Acceleration, and MaxSpeed)
-		
+		Vector2 Velocity;
+		Vector2 Acceleration;
+		Vector2 MaxSpeed;
+		int xx;
+		int yy;
+
+
+		float Lifetime;
+		Vector2 startVelocity;
 
 		// constructor + call base constructor
 		public Particle(float x, float y, Color color) : base("resources/spaceship.png")
@@ -33,6 +41,11 @@ namespace Movement
 			Position = new Vector2(x, y);
 			Scale = new Vector2(0.25f, 0.25f);
 			Color = color;
+			xx= 300;
+			yy= 300;
+			startVelocity= new Vector2(xx,yy);
+			Reset();
+			
 		}
 
 		// Update is called every frame
@@ -40,13 +53,14 @@ namespace Movement
 		{
 			Move(deltaTime);
 			WrapEdges();
+			Lifetime-= 1;
 		}
 
 		// your own private methods
-		private void Move(float deltaTime)
+		public void Move(float deltaTime)
 		{
 			// TODO implement
-			// Position += Velocity * deltaTime;
+			Position += Velocity * deltaTime;
 		}
 
 		private void WrapEdges()
@@ -62,6 +76,23 @@ namespace Movement
 				// ...
 			}
 		}
+		public Boolean isDead() 
+		{
+			if(Lifetime<=0) 
+			{
+				return true;
+			}
+			return false;
+		}
+
+		public void Reset()
+		{
+			Lifetime = 100;
+			Velocity = startVelocity;
+		}
+		
+
+		
 
 	}
 }
