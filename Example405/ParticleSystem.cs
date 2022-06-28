@@ -34,11 +34,11 @@ namespace Movement
 			{
 				float randX = (float)rand.NextDouble();
 				float randY = (float)rand.NextDouble();
-				Vector2 pos = new Vector2(randX, randY) * 200;
-				pos -= new Vector2(100, 100);
-				Particle p = new Particle(pos.X, pos.Y, colors[rand.Next()%colors.Count]);
+				Vector2 pos = new Vector2(x, y);
+				// pos -= new Vector2(100, 100);
+				Particle p = new Particle(randX * 100, randY * 100, colors[rand.Next()%colors.Count]);
 				particles.Add(p);
-				p.Rotation = (float)Math.Atan2(pos.Y, pos.X);
+				// p.Rotation = (float)Math.Atan2(pos.Y, pos.X);
 				AddChild(p);
 			}
 		}
@@ -46,22 +46,22 @@ namespace Movement
 		// Update is called every frame
 		public override void Update(float deltaTime)
 		{
-			p2= particles[0];
-			if(p2.isDead()) 
-			{
-				particles.Remove(p2);
-				particles.Add(p2);
-				p2.Position= new Vector2(0,0);
-				p2.Reset();
+			// p2= particles[0];
+			// if(p2.isDead()) 
+			// {
+			// 	particles.Remove(p2);
+			// 	particles.Add(p2);
+			// 	p2.Position= new Vector2(0,0);
+			// 	p2.Reset();
 
-			}
-			else
-			{
-				foreach (Particle p in particles)
-				{
-	p2.Update(deltaTime);
-				}
-			}
+			// }
+			// else
+			// {
+			// 	foreach (Particle p in particles)
+			// 	{
+			// 		p.Update(deltaTime);
+			// 	}
+			// }
 		}
 
 		

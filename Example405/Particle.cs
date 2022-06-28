@@ -22,62 +22,49 @@ Methods:
 
 namespace Movement
 {
-	class Particle : SpriteNode
+	class Particle : MoverNode
 	{
 		// your private fields here (add Velocity, Acceleration, and MaxSpeed)
-		Vector2 Velocity;
-		Vector2 Acceleration;
 		Vector2 MaxSpeed;
-		int xx;
-		int yy;
+		Vector2 gravity;
 
 
 		float Lifetime;
-		Vector2 startVelocity;
 
 		// constructor + call base constructor
 		public Particle(float x, float y, Color color) : base("resources/spaceship.png")
 		{
+			gravity = new Vector2(0, 500);
 			Position = new Vector2(x, y);
 			Scale = new Vector2(0.25f, 0.25f);
 			Color = color;
-			xx= 300;
-			yy= 300;
-			startVelocity= new Vector2(xx,yy);
-			Reset();
+			Velocity= new Vector2(20,30);
+
+
+			// Random rand = new Random();
+
+			// float randX = (float)rand.NextDouble();
+			// float randY = (float)rand.NextDouble();
+			Acceleration = new Vector2(5, 6);
+
+			// Reset();
 			
 		}
 
 		// Update is called every frame
 		public override void Update(float deltaTime)
 		{
+			AddForce(gravity);
+
 			Move(deltaTime);
 			WrapEdges();
 			Lifetime-= 1;
 		}
 
 		// your own private methods
-		public void Move(float deltaTime)
-		{
-			// TODO implement
-			Position += Velocity * deltaTime;
-		}
-
-		private void WrapEdges()
-		{
-			float scr_width = Settings.ScreenSize.X;
-			float scr_height = Settings.ScreenSize.Y;
-			float spr_width = TextureSize.X;
-			float spr_heigth = TextureSize.Y;
-
-			// TODO implement...
-			if (Position.X > scr_width)
-			{
-				// ...
-			}
-		}
 		public Boolean isDead() 
 		{
+			return false;
 			if(Lifetime<=0) 
 			{
 				return true;
@@ -88,7 +75,8 @@ namespace Movement
 		public void Reset()
 		{
 			Lifetime = 100;
-			Velocity = startVelocity;
+			Velocity *= 0;
+			Acceleration *= 0;
 		}
 		
 
