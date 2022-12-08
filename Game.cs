@@ -10,7 +10,7 @@ namespace Movement
 		private Core core;
 		private List<SceneNode> scenes;
 
-		// constructor
+		// constructor...
 		public Game()
 		{
 			core = new Core("Movement Exercises");

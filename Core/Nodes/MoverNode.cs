@@ -85,7 +85,9 @@ namespace Movement
 			float spr_width = TextureSize.X;
 			float spr_height = TextureSize.Y;
 
-			// // TODO implement...
+			
+			
+			/*
 			if (Position.X > scr_width - spr_width/2)
 			{
 				Position.X = 0;
@@ -94,6 +96,25 @@ namespace Movement
 			{
 				Position.Y = 0;
 			}
+
+			*/
+
+			
+
+			if (Position.X > scr_width - spr_width/2)
+            {
+                Position.X = 0;
+            } 
+      
+            
+
+            if (Position.Y > scr_height - spr_height/2)
+            {
+                Position.Y = 0;
+            } 
+          
+
+		
 
 		}
 	}
