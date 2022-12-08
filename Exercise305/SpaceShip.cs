@@ -11,7 +11,7 @@ In this class, we have the properties:
 
 - Vector2 TextureSize
 - Vector2 Pivot
-- Color Color
+- Color Color......
 
 Methods:
 
