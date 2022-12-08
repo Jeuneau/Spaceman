@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "GJLwKXQ+OS2VLFtTUHvvH5f09Psd2wEXUTASBLJC0V35gcNyM5bMjAjjhrAFYEYOrmAqQ1jm4cdv8QMSpNYE2g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jeune\\Documents\\Schooljaar2022_2023\\Periode_2\\Project_2\\Movement\\Movement.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jeune\\.nuget\\packages\\raylib-cs\\4.0.0.1\\raylib-cs.4.0.0.1.nupkg.sha512",
+    "C:\\Users\\jeune\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
