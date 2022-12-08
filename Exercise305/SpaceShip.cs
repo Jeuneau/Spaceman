@@ -68,7 +68,7 @@ namespace Movement
 
 			// use thrustForce somewhere here
 			Acceleration.X += thrustForce * (float)Math.Cos(Rotation);
-			Acceleration.Y +=thrustForce * (float)Math.Sin(Rotation);
+			Acceleration.Y += thrustForce * (float)Math.Sin(Rotation);
 		}
 
 		public void NoThrust()
