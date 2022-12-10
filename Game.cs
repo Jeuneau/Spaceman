@@ -13,11 +13,11 @@ namespace Movement
 		// constructor...
 		public Game()
 		{
-			core = new Core("Movement Exercises");
+			core = new Core("Movement");
 			scenes = new List<SceneNode>();
 
 			
-			scenes.Add(new Exercise305("Exercise 3.5 - SpaceShip"));
+			scenes.Add(new Scene("Spaceman"));
 			
 		}
 

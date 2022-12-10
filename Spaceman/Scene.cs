@@ -3,16 +3,18 @@ using Raylib_cs;
 
 namespace Movement
 {
-	class Exercise305 : SceneNode
+	class Scene : SceneNode
 	{
+
+		public int NUM_Shoots= 50;
 		// private fields
-		private SpaceShip spaceship;
+		private Player player;
 
 		// constructor + call base constructor
-		public Exercise305(String t) : base(t)
+		public Scene(String t) : base(t)
 		{
-			spaceship = new SpaceShip();
-			AddChild(spaceship);
+			player = new Player();
+			AddChild(player);
 		}
 
 		// Update is called every frame
@@ -26,18 +28,25 @@ namespace Movement
 		private void HandleInput(float deltaTime)
 		{
 			if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)) {
-				spaceship.RotateLeft(deltaTime);
+				player.RotateLeft(deltaTime);
 			}
 			if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
-				spaceship.RotateRight(deltaTime);
+				player.RotateRight(deltaTime);
 			}
 			if (Raylib.IsKeyDown(KeyboardKey.KEY_UP)) {
-				spaceship.Thrust();
+				player.Thrust();
 			}
 			if (Raylib.IsKeyReleased(KeyboardKey.KEY_UP)) {
-				spaceship.NoThrust();
+				player.NoThrust();
 			}
 		}
+
+		/*public void Shoot() {
+			for
+			
+		}*/
+			
+		
 
 	} // class
 

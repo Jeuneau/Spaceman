@@ -21,14 +21,14 @@ Methods:
 
 namespace Movement
 {
-	class SpaceShip : MoverNode
+	class Player : MoverNode
 	{
 		// your private fields here (rotSpeed, thrustForce)
 		private float rotSpeed;
 		private float thrustForce;
 
 		// constructor + call base constructor
-		public SpaceShip() : base("resources/spaceship.png")
+		public Player() : base("resources/spaceship.png")
 		{
 			rotSpeed = (float)Math.PI; // rad/second
 			thrustForce = 500;
