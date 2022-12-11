@@ -4,13 +4,13 @@ using Raylib_cs;
 namespace Movement;
 
 
-class Plasmaround {
-  int x;
-  int y;
-  
-  int NUM_Shoots = 50;
+/*class Plasmaround {
+   static void Main(string[] args)
+  {
+      Plasmaround myObj= new Plasmaround();
+  }
 
-}
+}*/
 
   
   

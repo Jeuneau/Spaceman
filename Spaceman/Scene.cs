@@ -41,9 +41,10 @@ namespace Movement
 			}
 		}
 
-		/*public void Shoot() {
-			for
-			
+		/*public void Shoot() {			
+			for(int i=0; i<51;i++) {
+				Make Plasmashot
+			}	
 		}*/
 			
 		
