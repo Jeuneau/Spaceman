@@ -1,5 +1,6 @@
 using System;
 using Raylib_cs;
+using System.Numerics; 
 
 namespace Movement
 {
@@ -41,11 +42,14 @@ namespace Movement
 			}
 		}
 
-		/*public void Shoot() {			
-			for(int i=0; i<51;i++) {
-				Make Plasmashot
-			}	
-		}*/
+		
+
+		
+
+		public void Shoot() {			
+			
+
+		}
 			
 		
 

@@ -26,9 +26,10 @@ namespace Movement
 		// your private fields here (rotSpeed, thrustForce)
 		private float rotSpeed;
 		private float thrustForce;
+        internal static Vector2 position;
 
-		// constructor + call base constructor
-		public Player() : base("resources/spaceship.png")
+        // constructor + call base constructor
+        public Player() : base("resources/spaceship.png")
 		{
 			rotSpeed = (float)Math.PI; // rad/second
 			thrustForce = 500;
