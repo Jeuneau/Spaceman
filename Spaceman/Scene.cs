@@ -7,19 +7,23 @@ namespace Movement
 	class Scene : SceneNode
 	{
 
-		public int NUM_Shoots= 50;
+		
 		// private fields
 		private Player player;
+		private Plasmaround plasmaround;
 
 		// constructor + call base constructor
 		public Scene(String t) : base(t)
 		{
 			player = new Player();
 			AddChild(player);
+			
 		}
 
-		// Update is called every frame
-		public override void Update(float deltaTime)
+        
+
+        // Update is called every frame
+        public override void Update(float deltaTime)
 		{
 			base.Update(deltaTime);
 
@@ -40,16 +44,18 @@ namespace Movement
 			if (Raylib.IsKeyReleased(KeyboardKey.KEY_UP)) {
 				player.NoThrust();
 			}
+			if(Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE)) {
+				player.Shoot();
+			}
 		}
+
+		  
 
 		
 
 		
 
-		public void Shoot() {			
-			
-
-		}
+		
 			
 		
 
