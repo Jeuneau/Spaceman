@@ -78,10 +78,6 @@ namespace Movement
 			
 		}
 
-        public void Shoot()
-        {
-        	var instance = new Plasmaround();
-    		instance.Bullet();
-        }
+        
     }
 }

@@ -45,7 +45,8 @@ namespace Movement
 				player.NoThrust();
 			}
 			if(Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE)) {
-				player.Shoot();
+				var instance = new Plasmaround();
+    			instance.Bullet();
 			}
 		}
 
