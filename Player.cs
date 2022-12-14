@@ -94,8 +94,5 @@ namespace Movement
         
     }
 
-    internal class plasmaround
-    {
-        public static Vector2 Position { get; internal set; }
-    }
+    
 }
