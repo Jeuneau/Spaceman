@@ -28,6 +28,8 @@ namespace Movement
 		private float thrustForce;
         internal static Vector2 position;
 
+        public Vector2 velocity { get; private set; }
+
         // constructor + call base constructor
         public Player() : base("resources/spaceship.png")
 		{
@@ -83,7 +85,7 @@ namespace Movement
     		instance.Plasmaspawn();
 			Plasmaround p= new Plasmaround();
 			p.Position = this.Position;
-			p.Velocity= new Vector2(5,6);
+			p.Velocity += p.Acceleration;
 			return p;
 	
 			
