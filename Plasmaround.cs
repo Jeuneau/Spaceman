@@ -17,11 +17,11 @@ class Plasmaround : MoverNode {
 
         public static Vector2 position { get; internal set; }
 
-        public void Bullet() {
-          Plasmaround plasmaround= new Plasmaround();
-          AddChild(plasmaround);
+        public void Plasmaspawn() {
+          Plasmaround p= new Plasmaround();
+          AddChild(p);
           
-          Acceleration += Velocity; 
+          
         }
      
     }

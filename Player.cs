@@ -78,6 +78,22 @@ namespace Movement
 			
 		}
 
+		public Plasmaround Shoot() {
+			var instance = new Plasmaround();
+    		instance.Plasmaspawn();
+			Plasmaround p= new Plasmaround();
+			p.Position = this.Position;
+			p.Velocity= new Vector2(5,6);
+			return p;
+	
+			
+		}
+
         
+    }
+
+    internal class plasmaround
+    {
+        public static Vector2 Position { get; internal set; }
     }
 }
