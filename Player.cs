@@ -29,6 +29,7 @@ namespace Movement
         internal static Vector2 position;
 
         public Vector2 velocity { get; private set; }
+		public Vector2 direction;
 
         // constructor + call base constructor
         public Player() : base("resources/spaceship.png")
@@ -81,11 +82,14 @@ namespace Movement
 		}
 
 		public Plasmaround Shoot() {
-			var instance = new Plasmaround();
-    		instance.Plasmaspawn();
+			//var instance = new Plasmaround();
+    		//instance.Plasmaspawn();
 			Plasmaround p= new Plasmaround();
-			p.Position = this.Position;
-			p.Velocity += p.Acceleration;
+			p.Position.X = this.Position.X + (float)Math.Cos(Rotation);
+			p.Position.Y = this.Position.Y +  (float)Math.Sin(Rotation);
+			
+			p.Velocity = new Vector2(thrustForce * (float)Math.Cos(Rotation), thrustForce * (float)Math.Sin(Rotation));
+			//new Vector2( Position.X, Position.Y );
 			return p;
 	
 			

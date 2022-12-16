@@ -17,12 +17,11 @@ class Plasmaround : MoverNode {
 
         public static Vector2 position { get; internal set; }
 
-        public void Plasmaspawn() {
-          Plasmaround p= new Plasmaround();
-          AddChild(p);
-          
-          
-        }
+        
+
+        public override void Update(float deltaTime) {
+			    Move(deltaTime);
+		    }
      
     }
 }
