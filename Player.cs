@@ -31,6 +31,8 @@ namespace Movement
         public Vector2 velocity { get; private set; }
 		public Vector2 direction;
 
+		public Vector2 direction_normal;
+
         // constructor + call base constructor
         public Player() : base("resources/spaceship.png")
 		{
@@ -89,6 +91,11 @@ namespace Movement
 			p.Position.Y = this.Position.Y +  (float)Math.Sin(Rotation);
 			
 			p.Velocity = new Vector2(thrustForce * (float)Math.Cos(Rotation), thrustForce * (float)Math.Sin(Rotation));
+			
+			//new Vector2 direction -> normalize -> multiply met afstand middelpunt-neus
+			direction= new Vector2((this.Position.X + (float)Math.Cos(Rotation)), (this.Position.Y +  (float)Math.Sin(Rotation)));
+			direction_normal = Vector2.Normalize(direction);
+			direction= direction_normal *32;
 			//new Vector2( Position.X, Position.Y );
 			return p;
 	

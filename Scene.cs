@@ -19,6 +19,7 @@ namespace Movement
 			player = new Player();
 			AddChild(player);
 			plasmarounds = new List<Plasmaround>();
+			//enemy = new Enemy();
 		}
 
 
