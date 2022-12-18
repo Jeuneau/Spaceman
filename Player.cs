@@ -34,13 +34,13 @@ namespace Movement
 		public Vector2 direction_normal;
 
         // constructor + call base constructor
-        public Player() : base("resources/spaceship.png")
+        public Player() : base("resources/spaceship_def.png")
 		{
 			rotSpeed = (float)Math.PI; // rad/second
 			thrustForce = 500;
 
 			Position = new Vector2(Settings.ScreenSize.X / 2, Settings.ScreenSize.Y / 2);
-			Color = Color.YELLOW;
+			
 		}
 
 		// Update is called every frame
@@ -69,7 +69,7 @@ namespace Movement
 		public void Thrust()
 		{
 			// TODO implement
-			Color = Color.ORANGE;
+			
         	
 
 			// use thrustForce somewhere here
@@ -79,7 +79,7 @@ namespace Movement
 
 		public void NoThrust()
 		{
-			Color = Color.YELLOW;
+			
 			
 		}
 
