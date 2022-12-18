@@ -9,7 +9,7 @@ namespace Movement
 class Plasmaround : MoverNode {
         public Plasmaround() : base("resources/Plasmaround.png")
         {
-          Position= Player.position;  
+         
            
         }
 

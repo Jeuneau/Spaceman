@@ -90,7 +90,7 @@ namespace Movement
 			p.Position.X = this.Position.X + (float)Math.Cos(Rotation);
 			p.Position.Y = this.Position.Y +  (float)Math.Sin(Rotation);
 			
-			p.Velocity = new Vector2(thrustForce * (float)Math.Cos(Rotation), thrustForce * (float)Math.Sin(Rotation));
+			p.Velocity = new Vector2(1700 * (float)Math.Cos(Rotation), 1700 * (float)Math.Sin(Rotation));
 			
 			//new Vector2 direction -> normalize -> multiply met afstand middelpunt-neus
 			direction= new Vector2((this.Position.X + (float)Math.Cos(Rotation)), (this.Position.Y +  (float)Math.Sin(Rotation)));
