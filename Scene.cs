@@ -55,13 +55,10 @@ namespace Movement
 			}
 			if(Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE)) {
 				Plasmaround p = player.Shoot();
-				AddChild(p);
-				plasmarounds.Add(p);
-				
-				
-
-    			//instance.Plasmaspawn();
-				//add to scene
+				if (p!= null) {
+					AddChild(p);
+					plasmarounds.Add(p);
+				}
 			}
 		}
 
