@@ -10,18 +10,23 @@ namespace Movement
 
 		List<Plasmaround> plasmarounds;
 		List<Enemy> enemies;
-		// private fields
-		private Player player;
+        private Enemy enemy;
+
+        // private fields
+        private Player player;
 
 		
 		// constructor + call base constructor
 		public Scene(String t) : base(t)
 		{
+			//for loop maken voor Player.isAlive
 			player = new Player();
 			AddChild(player);
 			plasmarounds = new List<Plasmaround>();
 			enemies= new List<Enemy>();
-			//enemy = new Enemy();
+			enemy= new Enemy();
+			AddChild(enemy);
+			enemy.Position = new Vector2(Settings.ScreenSize.X / 4, Settings.ScreenSize.Y / 4);
 		}
 
 
@@ -36,6 +41,9 @@ namespace Movement
 			base.Update(deltaTime);
 
 			HandleInput(deltaTime);
+
+			
+			
 
 			
 			
@@ -64,6 +72,12 @@ namespace Movement
 			}
 		}
 
+		
+
+		
+
+
+
 		  
 
 		
@@ -76,4 +90,5 @@ namespace Movement
 
 	} // class
 
+   
 } // namespace

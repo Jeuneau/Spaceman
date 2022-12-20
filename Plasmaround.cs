@@ -15,7 +15,7 @@ class Plasmaround : MoverNode {
 
 
 
-        public static Vector2 position { get; internal set; }
+       
 
         
 
