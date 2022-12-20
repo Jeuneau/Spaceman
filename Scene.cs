@@ -11,6 +11,8 @@ namespace Movement
 		List<Plasmaround> plasmarounds;
 		List<Enemy> enemies;
         private Enemy enemy;
+        private Enemy enemy2;
+        private Enemy enemy3;
 
         // private fields
         private Player player;
@@ -25,8 +27,15 @@ namespace Movement
 			plasmarounds = new List<Plasmaround>();
 			enemies= new List<Enemy>();
 			enemy= new Enemy();
+			enemy2= new Enemy();
+			enemy3= new Enemy();
 			AddChild(enemy);
+			AddChild(enemy2);
+			AddChild(enemy3);
+			
 			enemy.Position = new Vector2(Settings.ScreenSize.X / 4, Settings.ScreenSize.Y / 4);
+			enemy2.Position= new Vector2(Settings.ScreenSize.X / 12, Settings.ScreenSize.Y / 12);
+			enemy3.Position= new Vector2(Settings.ScreenSize.X / 8, Settings.ScreenSize.Y / 8);
 		}
 
 
