@@ -29,9 +29,9 @@ namespace Movement
        
 
         //public Vector2 velocity { get; private set; }
-		public Vector2 direction;
+		//public Vector2 direction;
 
-		public Vector2 direction_normal;
+		//public Vector2 direction_normal;
 
         // constructor + call base constructor
         public Player() : base("resources/spaceship_def.png")
