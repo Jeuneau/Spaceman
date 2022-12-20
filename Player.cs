@@ -94,12 +94,6 @@ namespace Movement
 			direction= direction_normal *32;
 			//new Vector2( Position.X, Position.Y );
 			return p;
-	
-			
 		}
-
-        
     }
-
-    
 }
