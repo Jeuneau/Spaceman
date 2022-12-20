@@ -9,6 +9,7 @@ namespace Movement
 	{
 
 		List<Plasmaround> plasmarounds;
+		List<Enemy> enemies;
 		// private fields
 		private Player player;
 
@@ -19,6 +20,7 @@ namespace Movement
 			player = new Player();
 			AddChild(player);
 			plasmarounds = new List<Plasmaround>();
+			enemies= new List<Enemy>();
 			//enemy = new Enemy();
 		}
 
