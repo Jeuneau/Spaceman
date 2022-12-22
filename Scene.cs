@@ -21,7 +21,7 @@ namespace Movement
 		// constructor + call base constructor
 		public Scene(String t) : base(t)
 		{
-			//for loop maken voor Player.isAlive
+			//for loop maken voor enemies als Player.isAlive
 			player = new Player();
 			AddChild(player);
 			plasmarounds = new List<Plasmaround>();
