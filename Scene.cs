@@ -48,14 +48,7 @@ namespace Movement
         public override void Update(float deltaTime)
 		{
 			base.Update(deltaTime);
-
-			HandleInput(deltaTime);
-
-			
-			
-
-			
-			
+			HandleInput(deltaTime);			
 		}
 
 		private void HandleInput(float deltaTime)
