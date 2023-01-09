@@ -49,6 +49,8 @@ namespace Movement
 		{
 			base.Update(deltaTime);
 			HandleInput(deltaTime);			
+			
+			
 		}
 
 		private void HandleInput(float deltaTime)
