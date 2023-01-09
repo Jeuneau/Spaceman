@@ -33,7 +33,7 @@ namespace Movement
 			AddChild(enemy2);
 			AddChild(enemy3);
 			
-			enemy.Position = new Vector2(Settings.ScreenSize.X / 4, Settings.ScreenSize.Y / 4);
+			enemy.Position = new Vector2(Settings.ScreenSize.X / 32, Settings.ScreenSize.Y / 32);
 			enemy2.Position= new Vector2(Settings.ScreenSize.X / 12, Settings.ScreenSize.Y / 12);
 			enemy3.Position= new Vector2(Settings.ScreenSize.X / 8, Settings.ScreenSize.Y / 8);
 		}
