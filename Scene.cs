@@ -15,7 +15,7 @@ namespace Movement
         private Enemy enemy3;
 
         // private fields
-        private Player player;..
+        private Player player;
 
 		
 		// constructor + call base constructor
