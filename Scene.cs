@@ -27,8 +27,7 @@ namespace Movement
 			plasmarounds = new List<Plasmaround>();
 			enemies= new List<Enemy>();
 			enemy= new Enemy();
-			enemy2= new Enemy();
-			enemy3= new Enemy();
+			
 			AddChild(enemy);
 			AddChild(enemy2);
 			AddChild(enemy3);

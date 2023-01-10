@@ -5,28 +5,28 @@ using Raylib_cs;
 namespace Movement;
 
 
-class Enemy : SpriteNode
+class Enemy : MoverNode
 {
 
-    	Vector2 Velocity;
-		Vector2 Acceleration;	
-		private float topspeed= 1000;
+    	//Vector2 Velocity;
+		//Vector2 Acceleration;	
+		//private float topspeed= 1000;
     public Enemy() : base("resources/Alien.png")
     {
-	    Position = new Vector2(this.Position.X, this.Position.Y);
+	   
     }
 
      public override void Update(float deltaTime) {
-        Follow(deltaTime);
-        WrapEdges(deltaTime);
+        Move(deltaTime);
+        WrapEdges();
 		
 	}
 
-    private void Follow(float deltaTime)
+    /*private void Follow(float deltaTime)
 		{
 			Vector2 enemy = Raylib.GetMousePosition();
-			// Console.WriteLine(mouse);
-			Acceleration= this.Position - Position;
+			//Console.WriteLine(mouse);
+			Acceleration= enemy - Position;
 			Acceleration= Vector2.Normalize(Acceleration);
 			
 			Velocity+= Acceleration;
@@ -40,9 +40,9 @@ class Enemy : SpriteNode
 			// TODO implement
 			// Position += Velocity * deltaTime;
 			Position+= Velocity* deltaTime;
-		}
+		}*/
 
-   public void WrapEdges(float deltaTime)
+   /*public void WrapEdges(float deltaTime)
 		{
 			float scr_width = Settings.ScreenSize.X;
 			float scr_height = Settings.ScreenSize.Y;
@@ -51,7 +51,7 @@ class Enemy : SpriteNode
 
 			
 			
-			/*
+			
 			if (Position.X > scr_width - spr_width/2)
 			{
 				Position.X = 0;
@@ -61,7 +61,7 @@ class Enemy : SpriteNode
 				Position.Y = 0;
 			}
 
-			*/
+			
 
 			
 
@@ -81,14 +81,5 @@ class Enemy : SpriteNode
             if (Position.Y < 0) {
                 Position.Y = scr_height;
             }
-
-		
-
+			*/
 		}
-
-
-
-
-   
-    
-}
