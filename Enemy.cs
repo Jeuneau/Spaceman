@@ -7,7 +7,7 @@ namespace Movement;
 
 class Enemy : MoverNode
 {
-	private float topspeed= 500;
+	private float topspeed= 250;
 
     	//Vector2 Velocity;
 		//Vector2 Acceleration;	
@@ -20,7 +20,7 @@ class Enemy : MoverNode
      public override void Update(float deltaTime) {
     	Move(deltaTime);
         WrapEdges();
-		Follow(deltaTime);
+		// Follow(deltaTime);
 		if((Velocity.Length()>topspeed))
 		{
 			Velocity= Vector2.Normalize(Velocity)* topspeed;
@@ -28,9 +28,10 @@ class Enemy : MoverNode
 		
 	}  
 
-	private void Follow(float deltaTime)
+	public void Follow(float deltaTime, Vector2 followpos)
 		{
-			Vector2 mouse = Raylib.GetMousePosition();
+			// Vector2 mouse = Raylib.GetMousePosition();
+			Vector2 mouse = followpos;
 			// Console.WriteLine(mouse);
 			Acceleration= mouse - Position;
 			Acceleration= Vector2.Normalize(Acceleration);
