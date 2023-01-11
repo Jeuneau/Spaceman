@@ -14,6 +14,11 @@ namespace Movement
         private Enemy enemy2;
         private Enemy enemy3;
 
+		private Enemy enemy4;
+
+		 private Enemy enemy5;
+
+
         // private fields
         private Player player;
 
@@ -29,19 +34,26 @@ namespace Movement
 			enemy= new Enemy();
 			enemy2= new Enemy();
 			enemy3= new Enemy();
-			
+			enemy4= new Enemy();
+			enemy5= new Enemy();
 			
 			AddChild(enemy);
 			AddChild(enemy2);
 			AddChild(enemy3);
+			AddChild(enemy4);
+			AddChild(enemy5);
 			
 			enemies.Add(enemy);
 			enemies.Add(enemy2);
 			enemies.Add(enemy3);
+			enemies.Add(enemy4);
+			enemies.Add(enemy5);
 
 			enemy.Position = new Vector2(Settings.ScreenSize.X / 32, Settings.ScreenSize.Y / 32);
 			enemy2.Position= new Vector2(Settings.ScreenSize.X / 12, Settings.ScreenSize.Y / 12);
 			enemy3.Position= new Vector2(Settings.ScreenSize.X / 8, Settings.ScreenSize.Y / 8);
+			enemy4.Position = new Vector2(Settings.ScreenSize.X / 16, Settings.ScreenSize.Y / 16);
+			enemy5.Position = new Vector2(Settings.ScreenSize.X / 64, Settings.ScreenSize.Y / 64);
 		}
 
 
