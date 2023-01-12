@@ -16,11 +16,17 @@ namespace Movement
 
 		private Enemy enemy4;
 
+		private Circle circle1;
+
+		private Circle circle2;
+
 		 private Enemy enemy5;
 
 
         // private fields
         private Player player;
+
+		bool Collision;
 
 		
 		// constructor + call base constructor
@@ -54,6 +60,24 @@ namespace Movement
 			enemy3.Position= new Vector2(Settings.ScreenSize.X / 8, Settings.ScreenSize.Y / 8);
 			enemy4.Position = new Vector2(Settings.ScreenSize.X / 16, Settings.ScreenSize.Y / 16);
 			enemy5.Position = new Vector2(Settings.ScreenSize.X / 64, Settings.ScreenSize.Y / 64);
+
+			/*AddChild(circle1);
+			AddChild(circle2);
+
+			bool Collision(circle1, circle2) {
+				if((circle1.radius + circle2.radius) > d) {
+					return true;
+				}
+				return false;
+			}
+
+			void CheckCollisions() {
+				foreach(plasmaround in Enemy.plasmarounds) {
+					if(Collision(plasmarounds.player)) {
+
+					}
+				}
+			}*/
 		}
 
 
