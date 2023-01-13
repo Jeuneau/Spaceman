@@ -61,6 +61,9 @@ namespace Movement
 			enemy4.Position = new Vector2(Settings.ScreenSize.X / 16, Settings.ScreenSize.Y / 16);
 			enemy5.Position = new Vector2(Settings.ScreenSize.X / 64, Settings.ScreenSize.Y / 64);
 
+			circle1= new Circle();
+			circle2 = new Circle();
+
 			/*AddChild(circle1);
 			AddChild(circle2);
 
