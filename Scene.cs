@@ -15,18 +15,30 @@ namespace Movement
         private Enemy enemy3;
 
 		private Enemy enemy4;
-
+		private Enemy enemy5;
 		private Circle circle1;
+
 
 		private Circle circle2;
 
-		 private Enemy enemy5;
+		private Circle circle3;
 
+		private Circle circle4;
+
+		private Circle circle5;
+
+		private Circle circle6;
 
         // private fields
         private Player player;
 
 		bool Collision;
+
+		float distx;
+
+		float disty;
+
+		float distance;
 
 		
 		// constructor + call base constructor
@@ -63,12 +75,33 @@ namespace Movement
 
 			circle1= new Circle();
 			circle2 = new Circle();
+			circle3= new Circle();
+			circle4= new Circle();
+			circle5= new Circle();
+			circle6= new Circle();
 
-			/*AddChild(circle1);
+			AddChild(circle1);
 			AddChild(circle2);
+			AddChild(circle3);
+			AddChild(circle4);
+			AddChild(circle5);
+			AddChild(circle6);
+
+			circle1.Position.X= player.Position.X;
+			circle2.Position= enemy.Position;
+			circle3.Position= enemy2.Position;
+			circle4.Position= enemy3.Position;
+			circle5.Position= enemy4.Position;
+			circle6.Position= enemy5.Position;
+
+
 
 			bool Collision(circle1, circle2) {
-				if((circle1.radius + circle2.radius) > d) {
+
+				distx= circle2.Position.X - circle1.Position.X;
+				disty = circle2.Position.Y - circle1.Position.Y;
+				distance= (float)Math.Sqrt((distx *distx) + (disty * disty));
+				if(distance <= circle1.radius + circle2.radius) {
 					return true;
 				}
 				return false;
@@ -81,6 +114,8 @@ namespace Movement
 					}
 				}
 			}*/
+
+			
 		}
 
 
@@ -99,8 +134,7 @@ namespace Movement
 			// todo loop through enemies
 			for (var i = 0; i < enemies.Count; i++) {
 			enemies[i].Follow(deltaTime, player.Position);
-			/*enemy2.Follow(deltaTime, player.Position);
-			enemy3.Follow(deltaTime, player.Position);*/
+
 			}
 			
 		}
