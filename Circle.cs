@@ -6,9 +6,10 @@ namespace Movement
 {
 
 class Circle : Node {
-    public float radius = 5;
+    public float radius= 32;
 
     public Circle() : base() {
+        
        
     }
    
