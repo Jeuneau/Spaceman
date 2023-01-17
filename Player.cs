@@ -26,7 +26,8 @@ namespace Movement
 		// your private fields here (rotSpeed, thrustForce)
 		private float rotSpeed;
 		private float thrustForce;
-       
+
+		Plasmaround p;
 
         //public Vector2 velocity { get; private set; }
 		//public Vector2 direction;

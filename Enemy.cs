@@ -11,6 +11,8 @@ class Enemy : MoverNode
 
     public static object plasmarounds { get; internal set; }
 
+	Plasmaround p;
+
     //Vector2 Velocity;
     //Vector2 Acceleration;	
     //private float topspeed= 1000;

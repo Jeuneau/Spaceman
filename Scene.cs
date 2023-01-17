@@ -10,7 +10,7 @@ namespace Movement
 
 		List<Plasmaround> plasmarounds;
 
-		Plasmaround p;
+		public Plasmaround p;
 		List<Enemy> enemies;
         private Enemy enemy;
         private Enemy enemy2;
@@ -20,6 +20,8 @@ namespace Movement
 		private Enemy enemy5;
 
 		public Vector2 distance_vec;
+
+		
 
 		double distance;
 
@@ -104,27 +106,15 @@ namespace Movement
 			circle6.Position= enemy5.Position;
 			circle7.Position= p.Position;*/
 
+			
 
 			
-			bool Collision(Plasmaround plasmaround, Enemy enemies) {
 
-				distance_vec= enemies.Position - plasmaround.Position;
-				distance= distance_vec.Length(); 
-				if(distance <= 67) {
-					return true;
-				}
-				return false;
-			}
 
-			void CheckCollisions(Plasmaround plasmaround, Enemy enemies) {
-				foreach(Plasmaround in  Player.plasmarounds) 
-				{
-					if(Collision()) {
-						RemoveChild(p);
+			
+			
 
-					}
-				}
-			}
+			
 
 			
 		}
@@ -155,17 +145,40 @@ namespace Movement
 			// todo loop through enemies
 			for (var i = 0; i < enemies.Count; i++) {
 			enemies[i].Follow(deltaTime, player.Position);
-			
-
-			/*Plasmaround p= enemies[i].Shoot();
+			Plasmaround p= enemies[i].Shoot();
 			AddChild(p);
 			plasmarounds.Add(p);
-			enemies[i].Shoot();*/
-			
+			enemy2.Shoot();
 			}
 
-			CheckCollision();
+			    // loop door lijst met lazers
+            // check distance met player
+            /*for (int i = 0; i < plasmarounds.Count; i++)
+            {
+                if (CalculateDistance(plasmarounds[i].Position, player.Position) < 20)
+                {
+					Console.WriteLine("boom");
+                    RemoveChild(plasmarounds[i]);
+                }
+            }
 
+			 for (int i = 0; i < plasmarounds.Count; i++)
+            {
+                if (CalculateDistance(plasmarounds[i].Position, enemy2.Position) < 20)
+                {
+                    Console.WriteLine("boom");
+					RemoveChild(plasmarounds[i]);
+                }
+            }*/
+
+
+			
+
+			
+			
+			
+
+			
 
 			
 		}
@@ -193,23 +206,14 @@ namespace Movement
 			}
 		}
 
-		
-
-		
-
-
-
-		  
-
-		
-
-		
-
-		
+		private float CalculateDistance(Vector2 a, Vector2 b)
+        {
+            return Vector2.Distance(a, b);
+        }
 			
 		
 
 	} // class
-
+	
    
 } // namespace
