@@ -145,10 +145,10 @@ namespace Movement
 			// todo loop through enemies
 			for (var i = 0; i < enemies.Count; i++) {
 			enemies[i].Follow(deltaTime, player.Position);
-			Plasmaround p= enemies[i].Shoot();
+			/*Plasmaround p= enemies[i].Shoot();
 			AddChild(p);
 			plasmarounds.Add(p);
-			enemy2.Shoot();
+			enemy2.Shoot();*/
 			}
 
 			    // loop door lijst met lazers
