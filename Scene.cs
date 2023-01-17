@@ -151,7 +151,7 @@ namespace Movement
 			enemy2.Shoot();*/
 			}
 
-			    // loop door lijst met lazers
+			// loop door lijst met plasmarounds
             // check distance met player
             /*for (int i = 0; i < plasmarounds.Count; i++)
             {
@@ -170,6 +170,24 @@ namespace Movement
 					RemoveChild(plasmarounds[i]);
                 }
             }*/
+
+			  for (int i = 0; i < plasmarounds.Count; i++)
+            {
+                if (CalculateDistance(plasmarounds[i].Position, enemies[i].Position) < 300)
+                {
+					Console.WriteLine("boom");
+                    RemoveChild(enemies[i]);
+                }
+            }
+
+				/*  for (int i = 0; i < plasmarounds.Count; i++)
+            {
+                if (CalculateDistance(plasmarounds[i].Position, player.Position) < 300)
+                {
+					Console.WriteLine("boom");
+                    RemoveChild(player);
+                }
+            } */
 
 
 			
