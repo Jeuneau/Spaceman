@@ -145,33 +145,35 @@ namespace Movement
 			// todo loop through enemies
 			for (var i = 0; i < enemies.Count; i++) {
 			enemies[i].Follow(deltaTime, player.Position);
-			/*Plasmaround p= enemies[i].Shoot();
-			AddChild(p);
-			plasmarounds.Add(p);
-			enemy2.Shoot();*/
+			
 			}
 
 			// loop door lijst met plasmarounds
             // check distance met player
             /*for (int i = 0; i < plasmarounds.Count; i++)
             {
-                if (CalculateDistance(plasmarounds[i].Position, player.Position) < 20)
+                if (CalculateDistance(plasmarounds[i].Position, player.Position) < 300)
                 {
 					Console.WriteLine("boom");
                     RemoveChild(plasmarounds[i]);
-                }
-            }
-
-			 for (int i = 0; i < plasmarounds.Count; i++)
-            {
-                if (CalculateDistance(plasmarounds[i].Position, enemy2.Position) < 20)
-                {
-                    Console.WriteLine("boom");
-					RemoveChild(plasmarounds[i]);
+					plasmarounds.RemoveAt(i);
                 }
             }*/
 
-			  for (int i = 0; i < plasmarounds.Count; i++)
+			 /*for (int i = 0; i < plasmarounds.Count; i++)
+            {
+				for (int e = 0; e < enemies.Count; e++) {
+
+                	if (CalculateDistance(plasmarounds[i].Position, enemies[e].Position) < 300)
+                	{
+                    Console.WriteLine("boom");
+					RemoveChild(plasmarounds[i]);
+					plasmarounds.RemoveAt(i);
+                	}
+            	}
+			}*/
+
+			for (int i = 0; i < plasmarounds.Count; i++)
             {
 				for (int e = 0; e < enemies.Count; e++) {
 					if (CalculateDistance(plasmarounds[i].Position, enemies[e].Position) < 300)
@@ -184,14 +186,7 @@ namespace Movement
 
             }
 
-				/*  for (int i = 0; i < plasmarounds.Count; i++)
-            {
-                if (CalculateDistance(plasmarounds[i].Position, player.Position) < 300)
-                {
-					Console.WriteLine("boom");
-                    RemoveChild(player);
-                }
-            } */
+				
 
 
 			
