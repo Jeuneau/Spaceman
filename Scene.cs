@@ -172,7 +172,8 @@ namespace Movement
                 	}
             	}
 			}*/
-
+			
+			//collision coderen per enemy
 			for (int i = 0; i < plasmarounds.Count; i++)
             {
 				for (int e = 0; e < enemies.Count; e++) {
