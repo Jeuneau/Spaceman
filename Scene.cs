@@ -150,29 +150,18 @@ namespace Movement
 
 			// loop door lijst met plasmarounds
             // check distance met player
-            /*for (int i = 0; i < plasmarounds.Count; i++)
-            {
-                if (CalculateDistance(plasmarounds[i].Position, player.Position) < 300)
-                {
-					Console.WriteLine("boom");
-                    RemoveChild(plasmarounds[i]);
-					plasmarounds.RemoveAt(i);
-                }
-            }*/
+           
 
-			 /*for (int i = 0; i < plasmarounds.Count; i++)
+			 for (int e = 0; e < enemies.Count; e++)
             {
-				for (int e = 0; e < enemies.Count; e++) {
-
-                	if (CalculateDistance(plasmarounds[i].Position, enemies[e].Position) < 300)
+                	if (CalculateDistance(player.Position, enemies[e].Position) < 64)
                 	{
                     Console.WriteLine("boom");
-					RemoveChild(plasmarounds[i]);
-					plasmarounds.RemoveAt(i);
+					RemoveChild(player);
+					
                 	}
-            	}
-			}*/
-			
+			}
+
 			//collision coderen per enemy
 			for (int i = 0; i < plasmarounds.Count; i++)
             {
