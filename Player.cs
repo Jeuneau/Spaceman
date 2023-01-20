@@ -29,6 +29,8 @@ namespace Movement
 
 		Plasmaround p;
 
+		private int health;
+
         //public Vector2 velocity { get; private set; }
 		//public Vector2 direction;
 
@@ -41,6 +43,7 @@ namespace Movement
 			thrustForce = 500;
 
 			Position = new Vector2(Settings.ScreenSize.X / 2, Settings.ScreenSize.Y / 2);
+			health = 100;
 			
 		}
 
@@ -78,6 +81,20 @@ namespace Movement
 			Acceleration.Y += thrustForce * (float)Math.Sin(Rotation);
 		}
 
+		public void Damage (int amount) {
+			health -= amount;  
+		}
+
+		public bool IsAlive() {
+			if (health <= 0) {
+				return false;
+			}
+			return true;
+		}
+
+		public void ShowHealth () {
+			Console.WriteLine("Player_HP" + health);
+		}
 		public void NoThrust()
 		{	
 			

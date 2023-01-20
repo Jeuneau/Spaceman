@@ -66,6 +66,9 @@ namespace Movement
         // Update is called every frame
         public override void Update(float deltaTime)
 		{
+			if(!player.IsAlive()) { return; }
+			
+			
 			base.Update(deltaTime);
 			HandleInput(deltaTime);
 
@@ -83,8 +86,10 @@ namespace Movement
             {
                 	if (CalculateDistance(player.Position, enemies[e].Position) < 64)
                 	{
-					RemoveChild(player);
+					
+					player.Damage(20);
 					 Console.WriteLine("You are dead :(. Better luck next time!");
+
                 	}
 			}
 
