@@ -101,19 +101,6 @@ namespace Movement
 				}
 
             }
-
-				
-
-
-			
-
-			
-			
-			
-
-			
-
-			
 		}
 
 		private void HandleInput(float deltaTime)
