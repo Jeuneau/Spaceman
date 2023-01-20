@@ -84,10 +84,10 @@ namespace Movement
         
 			 for (int e = 0; e < enemies.Count; e++)
             {
-                	if (CalculateDistance(player.Position, enemies[e].Position) < 40)
+                	if (CalculateDistance(player.Position, enemies[e].Position) < 1)
                 	{
 					
-					player.Damage(20);
+					player.Damage(5);
 					 Console.WriteLine("You are dead :(. Better luck next time!");
 
                 	}
