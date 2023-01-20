@@ -92,9 +92,9 @@ namespace Movement
 			return true;
 		}
 
-		public void ShowHealth () {
+		/*public void ShowHealth () {
 			Console.WriteLine("Player_HP" + health);
-		}
+		}*/
 		public void NoThrust()
 		{	
 			
