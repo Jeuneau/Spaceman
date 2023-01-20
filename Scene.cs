@@ -25,31 +25,11 @@ namespace Movement
 
 		double distance;
 
-		/*private Circle circle1;
-
-
-		private Circle circle2;
-
-		private Circle circle3;
-
-		private Circle circle4;
-
-		private Circle circle5;
-
-		private Circle circle6;
-
-		private Circle circle7;*/
-
         // private fields
         private Player player;
 
 		bool Collision;
 
-		
-
-		
-
-		
 		// constructor + call base constructor
 		public Scene(String t) : base(t)
 		{
@@ -81,59 +61,7 @@ namespace Movement
 			enemy3.Position= new Vector2(Settings.ScreenSize.X / 8, Settings.ScreenSize.Y / 8);
 			enemy4.Position = new Vector2(Settings.ScreenSize.X / 16, Settings.ScreenSize.Y / 16);
 			enemy5.Position = new Vector2(Settings.ScreenSize.X / 64, Settings.ScreenSize.Y / 64);
-
-			/*circle1= new Circle();
-			circle2 = new Circle();
-			circle3= new Circle();
-			circle4= new Circle();
-			circle5= new Circle();
-			circle6= new Circle();
-			circle7= new Circle();
-
-			AddChild(circle1);
-			AddChild(circle2);
-			AddChild(circle3);
-			AddChild(circle4);
-			AddChild(circle5);
-			AddChild(circle6);
-			AddChild(circle7);
-
-			circle1.Position.X= player.Position.X;
-			circle2.Position= enemy.Position;
-			circle3.Position= enemy2.Position;
-			circle4.Position= enemy3.Position;
-			circle5.Position= enemy4.Position;
-			circle6.Position= enemy5.Position;
-			circle7.Position= p.Position;*/
-
-			
-
-			
-
-
-			
-			
-
-			
-
-			
 		}
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // Update is called every frame
         public override void Update(float deltaTime)
@@ -150,15 +78,13 @@ namespace Movement
 
 			// loop door lijst met plasmarounds
             // check distance met player
-           
-
+        
 			 for (int e = 0; e < enemies.Count; e++)
             {
                 	if (CalculateDistance(player.Position, enemies[e].Position) < 64)
                 	{
-                    Console.WriteLine("boom");
 					RemoveChild(player);
-					
+					 Console.WriteLine("You are dead :(. Better luck next time!");
                 	}
 			}
 
