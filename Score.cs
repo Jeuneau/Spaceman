@@ -1,5 +1,13 @@
 public class Score {
 
+    private int scoreplayer;
+    public void Score_player() {
+        //aantal uitgeschakelde aliens optellen en printen in terminal
+        
+
+
+    }
+
 //private int punten;
 //private int puntenTarg;
 

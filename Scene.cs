@@ -30,6 +30,8 @@ namespace Movement
 
 		bool Collision;
 
+		private int Score;
+
 		// constructor + call base constructor
 		public Scene(String t) : base(t)
 		{
