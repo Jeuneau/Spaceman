@@ -84,7 +84,7 @@ namespace Movement
         
 			 for (int e = 0; e < enemies.Count; e++)
             {
-                	if (CalculateDistance(player.Position, enemies[e].Position) < 64)
+                	if (CalculateDistance(player.Position, enemies[e].Position) < 40)
                 	{
 					
 					player.Damage(20);
