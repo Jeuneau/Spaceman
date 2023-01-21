@@ -144,6 +144,8 @@ namespace Movement
 					AddChild(p);
 					plasmarounds.Add(p);
 				}
+				
+
 			}
 		}
 
