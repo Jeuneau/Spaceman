@@ -19,6 +19,10 @@ namespace Movement
 		private Enemy enemy4;
 		private Enemy enemy5;
 
+		private int dead_enemies= 0;
+
+		private int scoreplayer;
+
 		public Vector2 distance_vec;
 
 		
@@ -27,6 +31,8 @@ namespace Movement
 
         // private fields
         private Player player;
+
+		public int health;
 
 		bool Collision;
 
@@ -78,20 +84,16 @@ namespace Movement
 			// todo loop through enemies
 			for (var i = 0; i < enemies.Count; i++) {
 			enemies[i].Follow(deltaTime, player.Position);
-			
 			}
-
-			// loop door lijst met plasmarounds
-            // check distance met player
-        
 			 for (int e = 0; e < enemies.Count; e++)
             {
                 	if (CalculateDistance(player.Position, enemies[e].Position) < 1)
                 	{
-					
 					player.Damage(5);
-					 Console.WriteLine("You are dead :(. Better luck next time!");
+					Console.WriteLine(health + " health points left.");
 
+					if(health < 1)
+					 Console.WriteLine("You are dead :(. Better luck next time!");
                 	}
 			}
 
@@ -104,6 +106,11 @@ namespace Movement
 						Console.WriteLine("boom");
 						RemoveChild(enemies[e]);
 						enemies.RemoveAt(e);
+						dead_enemies++;
+						Console.WriteLine(dead_enemies + " points");
+						//aantal uitgeschakelde enemies optellen
+						
+						
 					}
 				}
 

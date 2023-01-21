@@ -29,7 +29,7 @@ namespace Movement
 
 		Plasmaround p;
 
-		private int health;
+		public int health;
 
         //public Vector2 velocity { get; private set; }
 		//public Vector2 direction;
