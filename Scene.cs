@@ -74,7 +74,11 @@ namespace Movement
         // Update is called every frame
         public override void Update(float deltaTime)
 		{
-			if(!player.IsAlive()) { return; }
+			if(!player.IsAlive()) 
+			{ 
+				return;		 
+			}
+			
 			
 			
 			base.Update(deltaTime);
@@ -89,12 +93,11 @@ namespace Movement
             {
                 	if (CalculateDistance(player.Position, enemies[e].Position) < 1)
                 	{
-					player.Damage(5);
-					Console.WriteLine(health + " health points left.");
-
-					if(health < 1)
-					 Console.WriteLine("You are dead :(. Better luck next time!");
-                	}
+					player.Damage(5);	
+					
+						
+					
+					}
 			}
 
 			//collision coderen per enemy
@@ -108,7 +111,10 @@ namespace Movement
 						enemies.RemoveAt(e);
 						dead_enemies++;
 						Console.WriteLine(dead_enemies + " points");
-						//aantal uitgeschakelde enemies optellen
+						if(dead_enemies>= 5) {
+							Console.WriteLine("Congratulations! You have won :)!");
+						}
+
 						
 						
 					}
@@ -145,6 +151,7 @@ namespace Movement
             return Vector2.Distance(a, b);
         }
 			
+		
 		
 
 	} // class

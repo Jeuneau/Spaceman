@@ -83,14 +83,22 @@ namespace Movement
 
 		public void Damage (int amount) {
 			health -= amount;  
+			Console.WriteLine(health + " health points left.");
 		}
 
 		public bool IsAlive() {
 			if (health <= 0) {
+				Console.WriteLine("You are dead :(. Better luck next time!");
 				return false;
+				
 			}
 			return true;
+			
 		}
+
+		
+
+		
 
 		/*public void ShowHealth () {
 			Console.WriteLine("Player_HP" + health);
