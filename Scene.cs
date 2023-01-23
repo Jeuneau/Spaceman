@@ -21,6 +21,13 @@ namespace Movement
 		private Enemy enemy4;
 		private Enemy enemy5;
 
+		private Enemy enemy6;
+        private Enemy enemy7;
+        private Enemy enemy8;
+
+		private Enemy enemy9;
+		private Enemy enemy10;
+
 		private int dead_enemies= 0;
 
 		private int scoreplayer;
@@ -61,25 +68,45 @@ namespace Movement
 			enemy3= new Enemy();
 			enemy4= new Enemy();
 			enemy5= new Enemy();
+			enemy6= new Enemy();
+			enemy7= new Enemy();
+			enemy8= new Enemy();
+			enemy9= new Enemy();
+			enemy10= new Enemy();
+
 			
 			AddChild(enemy);
 			AddChild(enemy2);
 			AddChild(enemy3);
 			AddChild(enemy4);
 			AddChild(enemy5);
+			AddChild(enemy6);
+			AddChild(enemy7);
+			AddChild(enemy8);
+			AddChild(enemy9);
+			AddChild(enemy10);
 			
 			enemies.Add(enemy);
 			enemies.Add(enemy2);
 			enemies.Add(enemy3);
 			enemies.Add(enemy4);
 			enemies.Add(enemy5);
+			enemies.Add(enemy6);
+			enemies.Add(enemy7);
+			enemies.Add(enemy8);
+			enemies.Add(enemy9);
+			enemies.Add(enemy10);
 
 			enemy.Position = new Vector2(Settings.ScreenSize.X / 32, Settings.ScreenSize.Y / 32);
-			enemy2.Position= new Vector2(Settings.ScreenSize.X / 12, Settings.ScreenSize.Y / 12);
-			enemy3.Position= new Vector2(Settings.ScreenSize.X / 8, Settings.ScreenSize.Y / 8);
-			enemy4.Position = new Vector2(Settings.ScreenSize.X / 16, Settings.ScreenSize.Y / 16);
-			enemy5.Position = new Vector2(Settings.ScreenSize.X / 64, Settings.ScreenSize.Y / 64);
-
+			enemy2.Position= new Vector2(Settings.ScreenSize.X / 12, Settings.ScreenSize.Y / 12*7);
+			enemy3.Position= new Vector2(Settings.ScreenSize.X / 8*7, Settings.ScreenSize.Y / 8*2);
+			enemy4.Position = new Vector2(Settings.ScreenSize.X / 16*3, Settings.ScreenSize.Y / 16*9);
+			enemy5.Position = new Vector2(Settings.ScreenSize.X / 64*4, Settings.ScreenSize.Y / 64*4);
+			enemy6.Position = new Vector2(Settings.ScreenSize.X / 32*7, Settings.ScreenSize.Y / 32*2);
+			enemy7.Position= new Vector2(Settings.ScreenSize.X / 12*8, Settings.ScreenSize.Y / 12*5);
+			enemy8.Position= new Vector2(Settings.ScreenSize.X / 8*2, Settings.ScreenSize.Y / 8*7);
+			enemy9.Position = new Vector2(Settings.ScreenSize.X / 16*6, Settings.ScreenSize.Y / 16);
+			enemy10.Position = new Vector2(Settings.ScreenSize.X / 64, Settings.ScreenSize.Y / 64*4);
 		
 
 
@@ -127,13 +154,14 @@ namespace Movement
 						RemoveChild(enemies[e]);
 						enemies.RemoveAt(e);
 						dead_enemies++;
+						RemoveChild(plasmarounds[i]);
 
 						
 						
 						
 						
 						
-						if(dead_enemies>= 5) {
+						if(dead_enemies>= 10) {
 							AddChild(youwon);
 						}
 					}
