@@ -1,27 +1,17 @@
-public class Score {
+using System; // Console
+using System.Numerics; // Vector2
+using Raylib_cs; // Color
 
-    private int scoreplayer;
-    public void Score_player() {
-        
-        
+namespace Movement {
+    class Score : MoverNode {
 
+        public Score() : base("resources/Score.png") {
+            Position= new Vector2(Settings.ScreenSize.X / 8, Settings.ScreenSize.Y / 8);
+
+
+        }
 
     }
-
-//private int punten;
-//private int puntenTarg;
-
-
-
-/*punten = 0;
-puntenTarg= 0;
-}
-
-void Update {
-    if KeyboardKey {
-        puntenTarg++;
-    }
-    drawText;*/
 }
 
 
