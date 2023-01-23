@@ -41,6 +41,8 @@ namespace Movement
 
 		private Gameover gameover;
 
+		private Youwon youwon;
+
 		// constructor + call base constructor
 		public Scene(String t) : base(t)
 		{
@@ -74,6 +76,7 @@ namespace Movement
 			enemy5.Position = new Vector2(Settings.ScreenSize.X / 64, Settings.ScreenSize.Y / 64);
 
 			gameover= new Gameover();
+			youwon= new Youwon();
 		}
 
         // Update is called every frame
@@ -115,7 +118,7 @@ namespace Movement
 						dead_enemies++;
 						Console.WriteLine(dead_enemies + " points");
 						if(dead_enemies>= 5) {
-							Console.WriteLine("Congratulations! You have won :)!");
+							AddChild(youwon);
 						}
 					}
 				}
