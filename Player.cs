@@ -88,7 +88,7 @@ namespace Movement
 
 		public bool IsAlive() {
 			if (health <= 0) {
-				Console.WriteLine("You are dead :(. Better luck next time!");
+				
 				return false;
 				
 				

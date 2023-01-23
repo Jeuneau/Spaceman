@@ -39,6 +39,8 @@ namespace Movement
 
 		private int Score;
 
+		private Gameover gameover;
+
 		// constructor + call base constructor
 		public Scene(String t) : base(t)
 		{
@@ -70,6 +72,8 @@ namespace Movement
 			enemy3.Position= new Vector2(Settings.ScreenSize.X / 8, Settings.ScreenSize.Y / 8);
 			enemy4.Position = new Vector2(Settings.ScreenSize.X / 16, Settings.ScreenSize.Y / 16);
 			enemy5.Position = new Vector2(Settings.ScreenSize.X / 64, Settings.ScreenSize.Y / 64);
+
+			gameover= new Gameover();
 		}
 
         // Update is called every frame
@@ -77,7 +81,8 @@ namespace Movement
 		{
 			if(!player.IsAlive()) 
 			{ 
-				return;		 
+				AddChild(gameover);
+				return;
 			}
 			
 			
@@ -95,9 +100,6 @@ namespace Movement
                 	if (CalculateDistance(player.Position, enemies[e].Position) < 1)
                 	{
 					player.Damage(5);	
-					
-						
-					
 					}
 			}
 
@@ -115,9 +117,6 @@ namespace Movement
 						if(dead_enemies>= 5) {
 							Console.WriteLine("Congratulations! You have won :)!");
 						}
-
-						
-						
 					}
 				}
 
@@ -144,7 +143,6 @@ namespace Movement
 					AddChild(p);
 					plasmarounds.Add(p);
 				}
-				
 
 			}
 		}
