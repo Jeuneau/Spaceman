@@ -155,6 +155,7 @@ namespace Movement
 						enemies.RemoveAt(e);
 						dead_enemies++;
 						RemoveChild(plasmarounds[i]);
+						
 
 						
 						
