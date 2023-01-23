@@ -178,6 +178,9 @@ namespace Movement
 			if (Raylib.IsKeyReleased(KeyboardKey.KEY_UP)) {
 				player.NoThrust();
 			}
+			if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN)) {
+				player.Reverse();
+			}
 			if(Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE)) {
 				Plasmaround p = player.Shoot();
 				if (p!= null) {

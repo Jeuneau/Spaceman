@@ -81,6 +81,12 @@ namespace Movement
 			Acceleration.Y += thrustForce * (float)Math.Sin(Rotation);
 		}
 
+		public void Reverse() {
+			Acceleration.X -= thrustForce * (float)Math.Cos(Rotation);
+			Acceleration.Y -= thrustForce * (float)Math.Sin(Rotation);
+
+		}
+
 		public void Damage (int amount) {
 			health -= amount;  
 			Console.WriteLine(health + " health points left.");
