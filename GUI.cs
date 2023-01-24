@@ -2,23 +2,20 @@ using System.Numerics;
 
 namespace Movement;
 
-class GUI : Node  {
-
-
-Node hp;
-
-
- 
-
- 
+class GUI : SpriteNode  {
+private int health;
 
 
 
 
-     public GUI() : base("resources/spaceship_def.png")
+     public GUI() : base("resources/Spaceship_health.png")
     {
        
-        hp.Position= new Vector2(100,100);
+        Position= new Vector2(120,80);
+    }
+
+    void Update() {
+    
     }
 
 

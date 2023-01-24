@@ -175,10 +175,10 @@ namespace Movement
 						}
 					}
 				}
+				
 
             }
-
-			hp.Scale.X= health;
+			//gui.Scale.X= health;
 		}
 
 		private void HandleInput(float deltaTime)
