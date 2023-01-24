@@ -7,8 +7,6 @@ namespace Movement {
 
         public Score() : base("resources/Score.png") {
             Position= new Vector2(Settings.ScreenSize.X / 8, Settings.ScreenSize.Y / 8);
-
-
         }
 
     }
