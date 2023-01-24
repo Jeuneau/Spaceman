@@ -56,20 +56,22 @@ namespace Movement
 		private void ShowScore(float deltaTime)
 		{
 
-			
+			//score = aantal dode enemies
 				
 			timer += deltaTime;
 			
 			if (timer > 1.0f) {
 				timer = 0.0f;
-				
-				score= dead_enemies;
+				showcounter = score;
+				score+= dead_enemies;
+				dead_enemies= 0;
 				score++;
-				
-				
-				
 			}
 				
+				
+				
+			
+			
 			Raylib.DrawText("Score: "+ score, 1150, 30, 20, Color.BLUE);
 			// Raylib.DrawText("fps: "+Raylib.GetFPS(), 1150, 10, 20, Color.GREEN);
 		}

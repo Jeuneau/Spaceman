@@ -31,7 +31,7 @@ namespace Movement
 
 		public int dead_enemies= 0;
 
-		private int scoreplayer;
+		private int score;
 
 		public Vector2 distance_vec;
 
@@ -128,6 +128,8 @@ namespace Movement
         // Update is called every frame
         public override void Update(float deltaTime)
 		{
+
+
 			if(!player.IsAlive()) 
 			{ 
 				AddChild(gameover);
@@ -151,6 +153,8 @@ namespace Movement
 					player.Damage(5);	
 					}
 			}
+
+			score= dead_enemies;
 
 			//collision coderen per enemy
 			for (int i = 0; i < plasmarounds.Count; i++)
