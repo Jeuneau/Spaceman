@@ -9,7 +9,8 @@ namespace Movement
 	class Scene : SceneNode
 	{
 
-		
+
+		//private GUI gui;		
 		List<Plasmaround> plasmarounds;
 
 		public Plasmaround p;
@@ -43,6 +44,8 @@ namespace Movement
 
 		public int health;
 
+		Node hp;
+
 		bool Collision;
 
 		
@@ -52,6 +55,8 @@ namespace Movement
 		private Gameover gameover;
 
 		private Youwon youwon;
+
+		private GUI gui;
 
 		
 
@@ -114,6 +119,9 @@ namespace Movement
 
 			gameover= new Gameover();
 			youwon= new Youwon();
+
+			gui= new GUI();
+			AddChild(gui);
 			
 		}
 
@@ -169,6 +177,8 @@ namespace Movement
 				}
 
             }
+
+			hp.Scale.X= health;
 		}
 
 		private void HandleInput(float deltaTime)
@@ -202,7 +212,9 @@ namespace Movement
         {
             return Vector2.Distance(a, b);
         }
-			
+
+		
+
 		
 		
 

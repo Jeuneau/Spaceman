@@ -1,21 +1,28 @@
-
+using System.Numerics;
 
 namespace Movement;
 
 class GUI : Node  {
 
 
- //Node hp = New Node("Spaceship_health.png");
+Node hp;
 
- //addChild(hp);
-
- //hp.position= Vector2(100,100);
 
  
 
-}
+ 
 
-//void Update() {
-    //hp.scale.X= health
-//}
+
+
+
+     public GUI() : base("resources/spaceship_def.png")
+    {
+       
+        hp.Position= new Vector2(100,100);
+    }
+
+
+    
+
+}
    

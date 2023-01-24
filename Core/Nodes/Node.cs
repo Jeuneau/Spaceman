@@ -46,7 +46,7 @@ namespace Movement
 		}
 
 		// Constructor
-		protected Node()
+		protected Node(string v)
 		{
 			// setup data structure
 			children = new List<Node>();
@@ -58,7 +58,11 @@ namespace Movement
 			Scale = new Vector2(1.0f, 1.0f);
 		}
 
-		public virtual void Update(float deltaTime)
+        protected Node()
+        {
+        }
+
+        public virtual void Update(float deltaTime)
 		{
 			// virtual (override in subclass)
 			// or don't, then this will be called
