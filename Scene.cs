@@ -178,7 +178,7 @@ namespace Movement
 				
 
             }
-			//gui.Scale.X= health;
+			gui.Scale.X= player.health /10;
 		}
 
 		private void HandleInput(float deltaTime)
