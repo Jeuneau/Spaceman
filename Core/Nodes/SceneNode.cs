@@ -62,8 +62,9 @@ namespace Movement
 			
 			if (timer > 1.0f) {
 				timer = 0.0f;
-				showcounter = score;
+				
 				score= dead_enemies;
+				score++;
 				
 				
 				
