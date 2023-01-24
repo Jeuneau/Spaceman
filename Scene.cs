@@ -150,7 +150,7 @@ namespace Movement
             {
                 	if (CalculateDistance(player.Position, enemies[e].Position) < 1)
                 	{
-					player.Damage(5);	
+					player.Damage(3);	
 					}
 			}
 
