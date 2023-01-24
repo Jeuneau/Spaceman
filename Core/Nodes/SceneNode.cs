@@ -12,6 +12,9 @@ namespace Movement
 
 	abstract class SceneNode : Node
 	{
+		private int score= 0;
+
+		private int dead_enemies;
 		public State State { get; set; }
 
 		private string scenetitle;
@@ -30,6 +33,7 @@ namespace Movement
 		{
 			ShowFrameRate(deltaTime);
 			ShowTitle();
+			ShowScore(deltaTime);
 		}
 
 		private float timer = 0;
@@ -46,6 +50,26 @@ namespace Movement
 			}
 
 			Raylib.DrawText("fps: "+showcounter, 1150, 10, 20, Color.GREEN);
+			// Raylib.DrawText("fps: "+Raylib.GetFPS(), 1150, 10, 20, Color.GREEN);
+		}
+
+		private void ShowScore(float deltaTime)
+		{
+
+			
+				
+			timer += deltaTime;
+			
+			if (timer > 1.0f) {
+				timer = 0.0f;
+				showcounter = score;
+				score= dead_enemies;
+				
+				
+				
+			}
+				
+			Raylib.DrawText("Score: "+ score, 1150, 30, 20, Color.BLUE);
 			// Raylib.DrawText("fps: "+Raylib.GetFPS(), 1150, 10, 20, Color.GREEN);
 		}
 

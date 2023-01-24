@@ -29,7 +29,7 @@ namespace Movement
 		private Enemy enemy9;
 		private Enemy enemy10;
 
-		private int dead_enemies= 0;
+		public int dead_enemies= 0;
 
 		private int scoreplayer;
 
