@@ -56,7 +56,7 @@ namespace Movement
 		private void ShowScore(float deltaTime)
 		{
 
-			//score = aantal dode enemies
+			//score = aantal dode enemies programmeren
 				
 			timer += deltaTime;
 			

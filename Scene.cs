@@ -161,19 +161,13 @@ namespace Movement
             {
 				for (int e = 0; e < enemies.Count; e++) {
 					
-					if (CalculateDistance(plasmarounds[i].Position, enemies[e].Position) < 20)
+					if (CalculateDistance(plasmarounds[i].Position, enemies[e].Position) < 7)
 					{
 						RemoveChild(enemies[e]);
 						enemies.RemoveAt(e);
 						dead_enemies++;
 						RemoveChild(plasmarounds[i]);
-						
 
-						
-						
-						
-						
-						
 						if(dead_enemies>= 10) {
 							AddChild(youwon);
 						}
