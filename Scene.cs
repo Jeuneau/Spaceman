@@ -161,7 +161,7 @@ namespace Movement
             {
 				for (int e = 0; e < enemies.Count; e++) {
 					
-					if (CalculateDistance(plasmarounds[i].Position, enemies[e].Position) < 6)
+					if (CalculateDistance(plasmarounds[i].Position, enemies[e].Position) < 10)
 					{
 						RemoveChild(enemies[e]);
 						enemies.RemoveAt(e);
