@@ -68,10 +68,6 @@ namespace Movement
 				score++;
 			}
 				
-				
-				
-			
-			
 			Raylib.DrawText("Score: "+ score, 1150, 30, 20, Color.BLUE);
 			// Raylib.DrawText("fps: "+Raylib.GetFPS(), 1150, 10, 20, Color.GREEN);
 		}
