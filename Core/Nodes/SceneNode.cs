@@ -14,7 +14,7 @@ namespace Movement
 	{
 		private int score= 0;
 
-		private int dead_enemies;
+		public int dead_enemies = 0;
 		public State State { get; set; }
 
 		private string scenetitle;
@@ -33,7 +33,7 @@ namespace Movement
 		{
 			ShowFrameRate(deltaTime);
 			ShowTitle();
-			ShowScore(deltaTime);
+			ShowScore();
 		}
 
 		private float timer = 0;
@@ -53,22 +53,13 @@ namespace Movement
 			// Raylib.DrawText("fps: "+Raylib.GetFPS(), 1150, 10, 20, Color.GREEN);
 		}
 
-		private void ShowScore(float deltaTime)
+		private void ShowScore()
 		{
 
 			//score = aantal dode enemies programmeren
 				
-			timer += deltaTime;
-			
-			if (timer > 1.0f) {
-				timer = 0.0f;
-				showcounter = score;
-				score+= dead_enemies;
-				dead_enemies= 0;
-				score++;
-			}
 				
-			Raylib.DrawText("Score: "+ score, 1150, 30, 20, Color.BLUE);
+			Raylib.DrawText("Score: "+ dead_enemies, 1150, 30, 20, Color.BLUE);
 			// Raylib.DrawText("fps: "+Raylib.GetFPS(), 1150, 10, 20, Color.GREEN);
 		}
 

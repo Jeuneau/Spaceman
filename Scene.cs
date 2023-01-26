@@ -29,9 +29,9 @@ namespace Movement
 		private Enemy enemy9;
 		private Enemy enemy10;
 
-		public int dead_enemies= 0;
+		//public int dead_enemies;
 
-		private int score;
+		//private float score;
 
 		public Vector2 distance_vec;
 
@@ -154,7 +154,7 @@ namespace Movement
 					}
 			}
 
-			score= dead_enemies;
+			//score= dead_enemies;
 
 			//collision coderen per enemy
 			for (int i = 0; i < plasmarounds.Count; i++)
@@ -166,6 +166,7 @@ namespace Movement
 						RemoveChild(enemies[e]);
 						enemies.RemoveAt(e);
 						dead_enemies++;
+						
 						RemoveChild(plasmarounds[i]);
 
 						if(dead_enemies>= 10) {
