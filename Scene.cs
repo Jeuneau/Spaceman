@@ -167,17 +167,18 @@ namespace Movement
 						enemies.RemoveAt(e);
 						dead_enemies++;
 						
-						RemoveChild(plasmarounds[i]);
-
-						if(dead_enemies>= 10) {
-							AddChild(youwon);
-						}
+						RemoveChild(plasmarounds[i]);		
 					}
+
 				}
 				
 
             }
 			gui.Scale.X= player.health /10;
+
+			if(dead_enemies>= 10) {
+				AddChild(youwon);
+			}
 		}
 
 		private void HandleInput(float deltaTime)

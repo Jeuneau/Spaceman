@@ -12,6 +12,7 @@ private int health;
     {
        
         Position= new Vector2(120,80);
+        Pivot= new Vector2(0,0);
     }
 
     void Update() {
